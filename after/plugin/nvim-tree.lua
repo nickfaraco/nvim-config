@@ -64,10 +64,15 @@ nvim_tree.setup {
         number = false,
         relativenumber = false,
     },
-    --[[ actions = {
-        quit_on_open = true,
-        window_picker = { enable = true },
-    }, ]]
+    actions = {
+        open_file = {
+            quit_on_open = true,
+            window_picker = { enable = true },
+        },
+        remove_file = {
+          close_window = true,
+        },
+    },
     renderer = {
         highlight_git = true,
         root_folder_modifier = ":t",
